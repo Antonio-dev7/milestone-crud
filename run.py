@@ -25,6 +25,11 @@ def get_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
+@app.route("/add_task")
+def add_reviews():
+    return render_template("add_reviews.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
