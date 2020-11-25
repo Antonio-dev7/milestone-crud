@@ -1,12 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- <h2>i'm extending the base template to reviews.html </h2> -->
 
-    {% for review in reviews %}
-        {{ review.movie_name }} <br>
-        {{ review.reviewer_name}} <br>    
-        {{ review.reviewer_movie_description}} <br>
-    {% endfor %}
+    <ul class="collapsible">
+        {% for review in reviews %}
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ review.movie_name }}</strong> : {{ review.due_date }}
+                <!-- {% if review.is_urgent == "on" %} -->
+                    <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                        data-position="right" data-tooltip="URGENT!"></i>
+                <!-- {% endif %} -->
+            </div>
 
+            <div class="collapsible-body">
+                <strong>{{ review.reviewer_name }}</strong>
+                <p>{{ review.movie_review }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
+
+
+

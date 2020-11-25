@@ -6,25 +6,7 @@
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="">
 
-            <!-- cards for movies/categories-->
-            <div class="row">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div class="card-image">
-                        <!-- <img src="images/sample-1.jpg"> -->
-                        <img src="images/sample-1.jpg" alt="heroflick monsters" style="width:100px;height:100px;">
-                        <span class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                        <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
        
 
 
@@ -40,9 +22,9 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                    <textarea id="What_did_you_think_of_the_movie?" name="What_did_you_think_of_the_movie?" minlength="5" 
+                    <textarea id="movie_review" name="movie_review" minlength="5" 
                         maxlength="200" class="materialize-textarea validate" required></textarea>
-                    <label for="What_did_you_think_of_the_movie?">What did you think of the movie?</label>
+                    <label for="movie_review">What did you think of the movie?</label>
                 </div>
             </div>
         </form>
@@ -51,3 +33,57 @@
 
 
 {% endblock %}
+
+
+
+
+
+
+
+<!-- cards for movies/categories-->
+            <!-- <div class="row">
+                <div class="col s12 m7">
+                    <div class="card">
+                        <div id="movie_name" name="movie_name" class="validate" required>    
+
+                        {% for movie in movies %}
+                        <div value="{{ movie.movie_name }}">
+                        <a href="https://8080-a15ae584-5685-4451-bf51-40acef097c5a.ws-eu01.gitpod.io/add_reviews">
+                        <img src="https://materializecss.com/images/sample-1.jpg" alt="HTML tutorial" 
+                        style="width:42px;height:42px;"></a>
+                        </div>
+
+                        <label for="movie_name">Movie Name</label>
+                        {% endfor %}
+                        </div>
+
+                        <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                        <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="row">
+                <div class="col s12 m7">
+                    <div class="card">
+                        <div class="card-image"> -->
+                        <!-- <img src="images/sample-1.jpg"> -->
+                        <!-- <img src="https://unsplash.com/photos/mm5hzUbW65g?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" 
+                            alt="heroflick monsters" style="width:100px; height:100px;">
+                        <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                        <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->

@@ -15,19 +15,21 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+
 mongo = PyMongo(app)
 
 
 @app.route("/")
 @app.route("/get_reviews")
 def get_reviews():
-    reviews = mongo.db.reviews.find()
+    reviews = list(mongo.db.reviews.find())
     return render_template("reviews.html", reviews=reviews)
 
 
-@app.route("/add_task")
+@app.route("/add_reviews")
 def add_reviews():
-    return render_template("add_reviews.html")
+    movies = mongo.db.movies.find().sort("movie_name", 1)
+    return render_template("add_reviews.html", movies=movies)
 
 
 if __name__ == "__main__":
