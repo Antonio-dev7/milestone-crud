@@ -19,7 +19,8 @@
                     </div>
 
                     <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="" class="btn-small green light-3">Delete</a>
+                    <a href="" class="btn-small light-yellow lighten-4">Edit</a>
                     </div>
                 </div>
             </div>
@@ -32,8 +33,21 @@
         {% for review in reviews %}
         <li>
             <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            
+                <div class="col s3">
                 <i class="fas fa-caret-down"></i>
-                <strong>{{ review.movie_name }}</strong> 
+                <a href="" class="btn-small green light-3">Delete</a>
+                <a href="" class="btn-small light-yellow lighten-4">Edit</a>
+                </div>
+                
+
+                <div class="col s9"> 
+                <strong>{{ review.movie_name }}</strong>
+                
+                </div>
+
+                
+                 
             </div>
 
 
