@@ -26,14 +26,23 @@ def get_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
-@app.route("/add_reviews")
+@app.route("/add_reviews", methods=["GET", "POST"])
 def add_reviews():
+    if request.method == "POST":
+        review = {
+            "movie_name": request.form.get("movie_name"),
+            "reviewer_name": request.form.get("reviewer_name"),
+            "review_description": request.form.get("review_description")
+        }
+        mongo.db.reviews.insert_one(review)
+        flash("Reviews added successfully")
+        return redirect(url_for("get_reviews"))
+
     movies = mongo.db.movies.find().sort("movie_name", 1)
     return render_template("add_reviews.html", movies=movies)
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
-
+    port=int(os.environ.get("PORT")),
+    debug=True)
