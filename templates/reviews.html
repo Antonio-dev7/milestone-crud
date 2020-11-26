@@ -2,29 +2,31 @@
 {% block content %}
 
     <div class="row">
-    {% for review in reviews %}
-    <div class="col s12 m2">
-      <div class="card">
+        <div class="col s12 m6 m3"><p>s12 m6 l3</p>
+            <!-- <div class="row"> -->
+            {% for review in reviews %}
+            <div class="col s12 m4">
+                <div class="card">
 
-        <div class="card-image">
-          <img src="images/sample-1.jpg">
-          <strong>{{ review.movie_name }}</strong>
-        </div>
+                    <div class="card-image">
+                    <img src="images/sample-1.jpg">
+                    <strong>{{ review.movie_name }}</strong>
+                    </div>
 
-        <div class="card-content">
-            <strong>{{ review.reviewer_name }}</strong><!--<span class="card-title">Card Title</span>-->
-            <p>{{ review.movie_review }}</p>
-          <!-- <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p> -->
-        </div>
+                    <div class="card-content">
+                        <strong>{{ review.reviewer_name }}</strong>
+                        <p>{{ review.movie_review }}</p>
+                    </div>
 
-        <div class="card-action">
-          <a href="#">This is a link</a>
+                    <div class="card-action">
+                    <a href="#">This is a link</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
+    </div> 
+
 <!---->
     <ul class="collapsible"> 
         {% for review in reviews %}
