@@ -3,45 +3,21 @@
 
     <h3 class="light-blue-text text-darken-4 center-align">Add Heroflick Reviews</h3>
 
-
-
-        <div class="row">
-        <div class="col s12 m6 m6"><p>s12 m6 l3</p>
-            <!-- <div class="row"> -->
-            
-            <div class="col s12 m4">
-                <div class="card">
-
-                    <div class="card-image">
-                    <img src="images/sample-1.jpg">
-                    <strong>dsdsdsdsdsdsd</strong>
-                    </div>
-
-                    <div class="card-content">
-                        <strong>dsdsdsdsdsdsdssdsdsd</strong>
-                        <p>dsdsdsds</p>
-                    </div>
-
-                    <div class="card-action">
-                        <a class="waves-effect waves-light btn-small">Button</a><!-- <a href="#">This is a link</a> -->
-                    </div>
-                </div>
-            </div>
-        
-        </div>
-        </div>
-    
-
-
-
-
-
-
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action=""> 
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-fa-folder prefix light-blue-text text-darken-4"></i>
+                <select id="movie_name" name="movie_name" class="icons validate" required>
+                    <option value="" disabled selected>Choose Heroflick</option>
+                    {% for movie in movies %}
+                        <option value="{{ movie.movie_name }}">{{ movie.movie_name }}</option>
+                    {% endfor %}
+                </select>
+                    <label for="movie_name">Review Movies</label>
+                </div>
+            </div>
 
-            
-       
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
@@ -65,57 +41,3 @@
 
 
 {% endblock %}
-
-
-
-
-
-
-
-<!-- cards for movies/categories-->
-            <!-- <div class="row">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div id="movie_name" name="movie_name" class="validate" required>    
-
-                        {% for movie in movies %}
-                        <div value="{{ movie.movie_name }}">
-                        <a href="https://8080-a15ae584-5685-4451-bf51-40acef097c5a.ws-eu01.gitpod.io/add_reviews">
-                        <img src="https://materializecss.com/images/sample-1.jpg" alt="HTML tutorial" 
-                        style="width:42px;height:42px;"></a>
-                        </div>
-
-                        <label for="movie_name">Movie Name</label>
-                        {% endfor %}
-                        </div>
-
-                        <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                        <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="row">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div class="card-image"> -->
-                        <!-- <img src="images/sample-1.jpg"> -->
-                        <!-- <img src="https://unsplash.com/photos/mm5hzUbW65g?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" 
-                            alt="heroflick monsters" style="width:100px; height:100px;">
-                        <span class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                        <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
