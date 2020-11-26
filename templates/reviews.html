@@ -1,17 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <div class="row">
+    {% for review in reviews %}
+    <div class="col s12 m2">
+      <div class="card">
 
+        <div class="card-image">
+          <img src="images/sample-1.jpg">
+          <strong>{{ review.movie_name }}</strong>
+        </div>
+
+        <div class="card-content">
+            <strong>{{ review.reviewer_name }}</strong><!--<span class="card-title">Card Title</span>-->
+            <p>{{ review.movie_review }}</p>
+          <!-- <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p> -->
+        </div>
+
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+<!---->
     <ul class="collapsible"> 
         {% for review in reviews %}
         <li>
             <div class="collapsible-header white-text light-blue darken-4 text-shadow">
                 <i class="fas fa-caret-down"></i>
-                <strong>{{ review.movie_name }}</strong> : {{ review.due_date }}
-                <!-- {% if review.is_urgent == "on" %} -->
-                    <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
-                        data-position="right" data-tooltip="URGENT!"></i>
-                <!-- {% endif %} -->
+                <strong>{{ review.movie_name }}</strong> 
             </div>
 
             <div class="collapsible-body">
@@ -22,6 +42,11 @@
         {% endfor %}
     </ul>
 {% endblock %}
+
+
+
+
+
 
 
 
