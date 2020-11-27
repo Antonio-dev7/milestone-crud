@@ -19,8 +19,8 @@
                     </div>
 
                     <div class="card-action">
-                    <a href="" class="btn-small green light-3">Delete</a>
-                    <a href="" class="btn-small light-yellow lighten-4">Edit</a>
+                    <a href="" class="btn-small green light-3">Done</a>
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small light-yellow lighten-4">Edit</a>
                     </div>
                 </div>
             </div>
@@ -29,6 +29,7 @@
     </div> 
 
 <!---->
+    <h3 class="light-blue-text text-darken-4 center-align">Edit Review</h3>
     <ul class="collapsible"> 
         {% for review in reviews %}
         <li>
@@ -36,8 +37,8 @@
             
                 <div class="col s3">
                 <i class="fas fa-caret-down"></i>
-                <a href="" class="btn-small green light-3">Delete</a>
-                <a href="" class="btn-small light-yellow lighten-4">Edit</a>
+                <a href="" class="btn-small green light-3">Done</a>
+                <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small light-yellow lighten-4">Edit</a>
                 </div>
                 
 

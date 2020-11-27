@@ -42,6 +42,13 @@ def add_reviews():
     return render_template("add_reviews.html", movies=movies)
 
 
+@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+def edit_review(review_id):
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    movies = mongo.db.movies.find().sort("movies_name", 1)
+    return render_template("edit_review.html", review=review, movies=movies)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
     port=int(os.environ.get("PORT")),
