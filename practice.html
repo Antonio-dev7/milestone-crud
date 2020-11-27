@@ -56,3 +56,32 @@
     <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
     <div class="col s12 m6 l3"><p>s12 m6 l3</p></div> -->
   <!--</div> -->
+
+
+
+
+      <h3 class="light-blue-text text-darken-4 center-align">Edit Review</h3>
+    <ul class="collapsible"> 
+        {% for review in reviews %}
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            
+                <div class="col s3">
+                    <i class="fas fa-caret-down"></i>
+                    <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn-small green light-3">Done</a>
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small light-yellow lighten-4">Edit</a>
+                </div>
+
+                <div class="col s9"> 
+                <strong>{{ review.movie_name }}</strong>
+                
+                </div>
+            </div>
+
+            <div class="collapsible-body">
+                <strong>{{ review.reviewer_name }}</strong>
+                <p>{{ review.review_description }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
