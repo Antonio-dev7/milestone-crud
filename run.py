@@ -65,6 +65,12 @@ def delete_review(review_id):
     return redirect(url_for("get_reviews"))
 
 
+@app.route("/get_movies")
+def get_movies():
+    movies = list(mongo.db.movies.find().sort("movie_name", 1))
+    return render_template("movies.html", movies=movies)
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
