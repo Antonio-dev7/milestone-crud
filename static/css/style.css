@@ -81,13 +81,10 @@ img:hover {
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background: #ecf0f1;
-}
+
 
 .wrapper {
-    max-width: 75rem;
+    max-width: 110rem;
     padding: 2rem;
     margin: 0 auto;
 }
@@ -130,6 +127,9 @@ body {
     grid-column: 3 / span 1;
     grid-row: 4 / span 1;
 }
+/*---------------------------------------*/
+
+
 
 /* Gallery Link */
 .gallery__link {
@@ -255,6 +255,13 @@ body {
         grid-column: 2 / span 1;
         grid-row: 4 / span 1;
     }
+/*---------------------------------------*/
+
+
+    
+
+
+
 
     .gallery__overlay {
         font-size: 1.25rem;
