@@ -11,29 +11,29 @@
         <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80"> <!-- random image -->
         <span>Photo by <a href="https://unsplash.com/@kyleunderscorehead?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Kyle Head</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
         <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>Heroflick-Reviews</h3>
+          <h5 class="light grey-text text-lighten-3">We care about your opinions when it comes to films!</h5>
         </div>
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"> <!-- random image -->
         <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>Your reviews helps us recommand movies</h3>
+          <h5 class="light grey-text text-lighten-3">We want to help people make their decisions on which movies to watch.</h5>
         </div>
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1940&q=80"> <!-- random image -->
         <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>Cut, Action!</h3>
+          <h5 class="light grey-text text-lighten-3">Review our films.</h5>
         </div>
       </li>
       <li>
         <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"> <!-- random image -->
         <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>Amsterdam Is where we are based In.</h3>
+          <h5 class="light grey-text text-lighten-3">Be part of our community of movie reviewers.</h5>
         </div>
       </li>
     </ul>
@@ -43,9 +43,31 @@
 
 <br>
 
+<!---->
+    <h3 class="light-blue-text text-darken-4 center-align">Heroflick Search</h3>
 
-    <h3 class="light-blue-text text-darken-4 center-align">Edit Review</h3>
+    <div class="row card-panel grey lighten-5">
+        <form action="{{ url_for('search') }}" method="POST" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                    <label for="query">Search Review</label>
+                </div>
 
+                <div class="col s12 m4">
+                    <a href="{{ url_for('get_reviews') }}" class="red btn text-shadow">Reset</a>
+                    <button type="submit" class="light-blue darken-1 btn text-shadow">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+<!---->
+
+
+    {% if reviews|length > 0 %}
     <div class="row">
         <div class="col s12 m6 m3">
             
@@ -72,6 +94,9 @@
             {% endfor %}
         </div>
     </div> 
+    {% else %}
+        <h2 class="red-text text-darken-4 center-align">No Results Found</h2>
+    {% endif %}
 
 <!---->
 

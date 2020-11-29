@@ -71,6 +71,12 @@ def get_movies():
     return render_template("movies.html", movies=movies)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
+    return render_template("reviews.html", reviews=reviews)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
