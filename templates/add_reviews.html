@@ -11,7 +11,7 @@
                 <div class="input-field col s12">
                 <i class="fas fa-fa-folder prefix light-blue-text text-darken-4"></i>
                 <select id="movie_name" name="movie_name" class="icons validate" required>
-                    <option value="" disabled selected>Choose Heroflick</option>
+                    <option value="" disabled selected><span class="green btn text-shadow">Choose Heroflick</span></option>
                     {% for movie in movies %}
                         <option value="{{ movie.movie_name }}">{{ movie.movie_name }}</option>
                     {% endfor %}
