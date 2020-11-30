@@ -1,5 +1,6 @@
 # Code institute - Data Centric Development Project
 
+
 This is my third project of the course.
 I decided to build a movie review website which allows people to review superhero movies.
 I allows users to go and see add and review or delete movie reviews.
@@ -55,7 +56,25 @@ Everything works on all browsers and is extremely resposive.
 
 
 ## Deployment
-To git hub and Heroku.
+* To github and Heroku.
+* Project link - https://heroflick-reviews.herokuapp.com/
+* I followed the step by step guide from the course to Deployment and to connect it to github and gitpod.
+
+Application was deployed to herokuapp
+Steps :
+
+* Created a heroku account with the correct name and location.
+* Create a link to my github account to link both.
+* All my code was in the repository so that the deployment could be made, by entered my account details.
+* Once found, I enabld automatic deployment.
+* Went to settings option Config-vars enter the details my project contained.
+* The --> generate a Procfile for the project,- create a -->  "echo web: python run.py!
+* Always update freeze --local > requirements.txt" so heroku knows which files your using.
+
+* When i opened the app on heroku because it was linked to my github account, everything I did on my repository
+was automatically updated to heroku as well.
+
+
 
 ## Credits
 
