@@ -58,6 +58,7 @@ Everything works on all browsers and is extremely resposive.
 ## Deployment
 * To github and Heroku.
 * Project link - https://heroflick-reviews.herokuapp.com/
+* https://8080-a15ae584-5685-4451-bf51-40acef097c5a.ws-eu01.gitpod.io/
 * I followed the step by step guide from the course to Deployment and to connect it to github and gitpod.
 
 Application was deployed to herokuapp
