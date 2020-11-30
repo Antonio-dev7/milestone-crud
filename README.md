@@ -89,6 +89,9 @@ was automatically updated to heroku as well.
 * https://www.rottentomatoes.com/
 * Images https://www.marvel.com/movies. / Not all images
 
-## Code
+## Languages used 
+HTML + CSS /Python /JavaScript/ Dockerfile /
+
+## Code 
 
 * https://materializecss.com/color.html for the responsiveness of the page.
