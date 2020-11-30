@@ -1,45 +1,88 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Code institute - Data Centric Development Project
 
-Welcome Antonio-dev7,
+This is my third project of the course.
+I decided to build a movie review website which allows people to review superhero movies.
+I allows users to go and see add and review or delete movie reviews.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
 
-## Gitpod Reminders
+### User Experience -  How can use the App?
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+These are the actions the user can perform on the app.
 
-`python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
+* The user can - add a review for a movie
+* The user can - search for a movie
+* The user can - edit review
+* The user can - delete a review
+* The user can - add a review search for a movie
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: *Make Public*,
+## Wireframes
 
-Another blue button should appear to click: *Open Browser*.
+Wireframes are attached to the folder
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Database
 
-## Updates Since The Instructional Video
+Database is MongoDB, and you must be able to store a review, movie name, remove files and add and edit files.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Design
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+I took inspiration from movie reviews from the 1998 or so.
+* Use - https://materializecss.com/color.html as a templates.
+* Images come from wikipedia and and unsplash.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Implementation
+* I used several marvel movie titles and I connected to the database. 
+* Used python3 and flask render tamplates and connected via URL_links to connect it to the database.
+* To perform search, edit , delete , and add movies.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Features
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Many more Potential Additional Features
 
---------
+* Could add users/admin
+* Could get more movies and films
+* Could create bigger database to accomodate users.
 
-Happy coding!
+## Testing
+
+Everything works on all browsers and is extremely resposive.
+
+
+
+## Deployment
+
+Application was deployed to Heroku. The steps for this are as follows:
+
+1. After logging into my Heroku account, I clicked 'New' and then 'Create New App'
+2. I have to give my new app a name and pick my region as Europe.
+3. I had to link my GitHub repository, containing all my code, to Heroku so I clicked the 'Deploy' tab.
+4. I enter the details of my account and repository to link the two.
+5. I then have to enable automatic deploys, so when I push to GitHub, it deploys my code to Heroku; so I click on that.
+6. I had to enable environment variables for my project, so I click on 'Settings' > 'Reveal Config Vars' and enter in the ones my project uses.
+7. I have to generate a Procfile for my project, which I did by typing "echo web: python run.py > Procfile" into the terminal.
+8. I had to generate a requirements file as well, which I did by typing "sudo pip3 freeze --local > requirements.txt" into the terminal.
+9. I had to disable the debug environment before deployment, which I did by removing 'True' from the line in my run.py file, and replacing it with 'False'
+10. Once I have these changes added and committed using git, I had to push them to my git repository using 'git push' in the terminal. This also pushed the project to Heroku, where it began automatically installing dependencies and deploying the project.
+
+
+## Credits
+
+## Content
+
+* Book icon on navbar courtesy of Font Awesome
+* Navbar font and general site font taken from Google Fonts
+
+## Media
+
+* wikipedia for the movie information.
+* https://www.rottentomatoes.com/
+* Images https://www.marvel.com/movies. / Not all images
+
+## Code
+
+* https://materializecss.com/color.html for the responsiveness of the page.
