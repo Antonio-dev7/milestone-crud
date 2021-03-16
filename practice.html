@@ -1,5 +1,4 @@
 <div class="col s12 m6 m3"><p>s12 m6 l3</p>
-    <!-- <div class="row"> -->
     {% for review in reviews %}
     <div class="col s12 m4">
       <div class="card">
@@ -10,10 +9,9 @@
         </div>
 
         <div class="card-content">
-            <strong>{{ review.reviewer_name }}</strong><!--<span class="card-title">Card Title</span>-->
+            <strong>{{ review.reviewer_name }}</strong>
             <p>{{ review.movie_review }}</p>
-          <!-- <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p> -->
+         
         </div>
 
         <div class="card-action">
@@ -23,42 +21,6 @@
     </div>
     {% endfor %}
   </div>
-
-
-<!-- <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small green light-3">Delete</a>
-                <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small light-yellow lighten-4">Edit</a> -->
-
-   <!-- <div class="row">
-
-        <div class="col s12 m6 m3"><p>s12 m6 l3
-                 <div class="row"> 
-                <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                    <img src="images/sample-1.jpg">
-                    <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                    <p>I am a very simple card. 
-                    I am good at containing small bits of information.
-                    I am convenient because I require 
-                    little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                    <a href="#">This is a link</a>
-                    </div>
-                </div>
-                 </div> 
-            </div>
-                </p>
-        </div> -->
-    <!-- <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
-    <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
-    <div class="col s12 m6 l3"><p>s12 m6 l3</p></div> -->
-  <!--</div> -->
-
-
-
 
       <h3 class="light-blue-text text-darken-4 center-align">Edit Review</h3>
     <ul class="collapsible"> 

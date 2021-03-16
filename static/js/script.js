@@ -3,11 +3,7 @@ $(document).ready(function () {
     $(".collapsible").collapsible();
     $('select').formSelect();
     $('.slider').slider();
-    // $(".tooltipped").tooltip();
-    // $('select').formSelect();
-
-
-
+    
 
      validateMaterializeSelect();
     function validateMaterializeSelect() {
@@ -38,18 +34,3 @@ $(document).ready(function () {
     }
 });
 
-
-
-
-
-
-//   });
-
-
-
-
-
-//   document.addEventListener('DOMContentLoaded', function () {
-//     let sidenavs = document.querySelectorAll(".sidenav");
-//     let sidenavsInstance = M.Sidenav.init(sidenavs, {edge: "right"});
-// });
